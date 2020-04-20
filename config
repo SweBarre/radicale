@@ -1,0 +1,31 @@
+[server]
+hosts = 0.0.0.0:5232
+
+[encoding]
+# Encoding for responding requests
+request = utf-8
+# Encoding for storing local collections
+stock = utf-8
+
+[auth]
+#type = http_x_remote_user
+type = htpasswd
+htpasswd_filename = /etc/radicale/htpasswd.bcrypt
+htpasswd_encryption = bcrypt
+
+[rights]
+# Value: None | authenticated | owner_only | owner_write | from_file | custom
+type = None
+
+[storage]
+filesystem_folder = /srv/radicale/collections
+
+[logging]
+
+debug = False
+# Store all environment variables (including those set in the shell)
+full_environment = False
+
+#[web]
+#type = None
+
